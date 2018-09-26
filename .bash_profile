@@ -11,8 +11,8 @@ function git() {
     for i in "$@"; do
         if [[ $i == "rebase" ]] ; then
             x=0
-            for i in "$@"; do
-                if [[ $i == "-i" ]] ; then
+            for j in "$@"; do
+                if [[ $j == "-i" ]] ; then
                     x=1
                 fi
             done
