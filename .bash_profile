@@ -10,16 +10,18 @@ alias powershell=/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe
 function git() {
     for i in "$@"; do
         if [[ $i == "rebase" ]] ; then
-            x=0
+            f=0
             for j in "$@"; do
                 if [[ $j == "-i" ]] ; then
-                    x=1
+                    f=1
+		    break
                 fi
             done
-            if [[ $x == 0 ]] ; then
+            if [[ $f == 0 ]] ; then
                 echo "YOU FORGOT TO DO INTERACTIVE MODE!"
                 return 1
             fi
+	    break
         fi
     done
     /usr/bin/git $@
