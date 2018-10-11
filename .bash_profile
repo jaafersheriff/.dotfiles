@@ -7,6 +7,7 @@ alias start=/bin/wsl-open.sh
 alias powershell=/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe
 
 # Get mad if rebasing without -i
+# Includes WSL override 
 function git() {
     for i in "$@"; do
         if [[ $i == "rebase" ]] ; then
@@ -24,7 +25,13 @@ function git() {
 	    break
         fi
     done
-    /usr/bin/git $@
+    
+    REALPATH=`readlink -f ${PWD}`
+    if [ "${REALPATH:0:5}" == "/mnt/" ]; then
+        git.exe "$@"
+    else
+        /usr/bin/git "$@"
+    fi    
 }
 
 # Prompt
