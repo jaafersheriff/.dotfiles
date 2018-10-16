@@ -8,21 +8,28 @@ BellType=0
 BellFlash=no
 ScrollbackLines=100000
 
+
+CursorType=block
+Term=xterm-256color
+
+BackgroundColour=0,0,0
+ForegroundColour=234,241,248
+CursorColour=235,235,235
+
 Black=214,214,214
 BoldBlack=25,25,25
 Red=200,0,100
-BoldRed=100,50,100
-Green=50,75,75
-BoldGreen=0,75,175
-Yellow=255,200,255
-BoldYellow=100,150,255
-Blue=200,75,200
-BoldBlue=150,200,255
+BoldRed=110,50,110
+Green=125,160,160
+BoldGreen=150,200,255
+Yellow=225,200,255
+BoldYellow=0,100,175 
+Blue=235,235,235
+BoldBlue=100,150,255 
 Magenta=150,50,150
 BoldMagenta=150,25,255
 Cyan=150,25,255
 BoldCyan=255,150,255
 White=225,225,225
 BoldWhite=255,255,255
-CursorType=block
 
