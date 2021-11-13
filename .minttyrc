@@ -1,4 +1,4 @@
-BoldAsFont=-1
+BoldAsFont=yes
 FontHeight=9
 Font=Lucida Console
 FontWeight=400
@@ -23,9 +23,9 @@ BoldRed=110,50,110
 Green=125,160,160
 BoldGreen=150,200,255
 Yellow=225,200,255
-BoldYellow=0,100,175 
+BoldYellow=0,100,175
 Blue=235,235,235
-BoldBlue=100,150,255 
+BoldBlue=100,150,255
 Magenta=150,50,150
 BoldMagenta=150,25,255
 Cyan=150,25,255
@@ -33,3 +33,9 @@ BoldCyan=255,150,255
 White=225,225,225
 BoldWhite=255,255,255
 
+
+FontSmoothing=full
+AllowBlinking=yes
+BoldAsColour=yes
+ClipShortcuts=no
+ComposeKey=off

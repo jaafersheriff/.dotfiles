@@ -1,8 +1,9 @@
+
 set background=dark
 syntax enable			" enable syntax processing
 
-set tabstop=4			" set tabs to be the same as 3 spaces
-set expandtab
+set tabstop=3			" set tabs to be the same as 3 spaces
+" set expandtab
 
 set number				" show line numbers
 
@@ -21,12 +22,8 @@ nnoremap k gk
 " higlight last inserted text
 nnoremap gV '['v]
 
-" Vertical line
-set colorcolumn=80
-highlight ColorColumn ctermbg=2
-
 " Folding
-set foldmethod=syntax
+set foldmethod=indent
 set foldnestmax=2
 set nofoldenable
 set foldlevel=2

@@ -1,0 +1,31 @@
+targetName=$(echo "${PWD##*/}")
+
+clear
+
+fullreset=0
+if [ $# -gt 0 ] ; then
+	if [ $1 == "-r" ]; then
+		fullreset=1
+	fi
+fi
+
+if [ ! -d "./build" ] ; then
+	mkdir build
+fi
+
+cd build
+
+if [ $fullreset -eq 1 ]; then
+	rm -rf *
+	cmake .. -G "MinGW Makefiles" 
+else
+   cmake ..
+fi
+
+cmake --build ./ -t $targetName
+
+if [ $? -eq 0 ]; then
+	./*.exe
+fi
+
+cd ..
