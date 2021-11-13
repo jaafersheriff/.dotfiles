@@ -1,11 +1,15 @@
 
 
 if [ -f ~/.bashrc ]; then
-    source ~/.bashrc
+	source ~/.bashrc
 fi
 
 if [ -f /etc/profile.d/git-prompt.sh ]; then
-    source /etc/profile.d/git-prompt.sh
+	source /etc/profile.d/git-prompt.sh
+fi
+
+if [ -f ~/qmk_utils/activate_msys2.sh ]; then
+	source ~/qmk_utils/activate_msys2.sh
 fi
 
 for f in $(find ~/.funcs/ -name "*.sh"); do source $f; done
