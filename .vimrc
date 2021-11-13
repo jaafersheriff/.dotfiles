@@ -22,14 +22,18 @@ nnoremap k gk
 " higlight last inserted text
 nnoremap gV '['v]
 
+" Vertical line
+set colorcolumn=80
+highlight ColorColumn ctermbg=2
+
 " Folding
-set foldmethod=indent
+set foldmethod=syntax
 set foldnestmax=2
 set nofoldenable
 set foldlevel=2
 set foldopen-=block
 
-set visualbell
+set belloff=all
 
 if $COLORTERM == 'gnome-terminal'
 	set t_Co=256
