@@ -8,10 +8,9 @@ function findtext() {
 
 	trashfile=/tmp/`randomstring`
 	edit=0
-	source=$PWD
 	for i in "$@"; do
 	 	if [[ "$i" != "-v" ]]; then
-			find $source -type f -exec grep -il "$i" {} \; >> $trashfile
+			find . -type f -exec grep -il "$i" {} \; >> $trashfile
 		else
 			edit=1
  		fi

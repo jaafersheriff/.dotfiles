@@ -22,20 +22,31 @@ nnoremap k gk
 " higlight last inserted text
 nnoremap gV '['v]
 
-" Vertical line
-set colorcolumn=80
-highlight ColorColumn ctermbg=2
-
 " Folding
-set foldmethod=syntax
+set foldmethod=indent
 set foldnestmax=2
 set nofoldenable
 set foldlevel=2
 set foldopen-=block
 
-set belloff=all
+" vertical bar 
+highlight ColorColumn ctermbg=Cyan
+set colorcolumn=108
+"set textwidth=108
 
 if $COLORTERM == 'gnome-terminal'
 	set t_Co=256
 endif
 
+" yank to system clipboard
+set clipboard=unnamed
+
+" Block vs line cursor on Edit/Insert modes
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[0 q"
+
+" reset the cursor on start (for older versions of vim, usually not required)
+augroup myCmds
+au!
+autocmd VimEnter * silent !echo -ne "\e[0 q"
+augroup END
