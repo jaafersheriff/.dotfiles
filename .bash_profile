@@ -24,10 +24,9 @@ HISTSIZE=10000
 
 bind "set completion-ignore-case on"
 
-
-MY_GIT_PROMPT='/home/jasherif/.my-git-prompt.sh'
+MY_GIT_PROMPT="/home/jaafers/.my-git-prompt.sh"
 GIT_PROMPT="/mnt/c/Program Files/Git/mingw64/share/git/completion/git-prompt.sh"
-if [ -f "$MY_GIT_PROMPT" ]; then
+if [ -f $MY_GIT_PROMPT ]; then
 	source "$MY_GIT_PROMPT" 
 elif [ -f "$GIT_PROMPT" ]; then
 	source "$GIT_PROMPT" 
@@ -41,6 +40,8 @@ PS_DISTRIB=$(grep DISTRIB_ID /etc/lsb-release | cut -d'=' -f2)
 # PS_DISTRIB_VERSION=$(grep DISTRIB_RELEASE /etc/lsb-release | cut -d'=' -f2)
 PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]' # set window title
 PS1="$PS1"'\n'                 # new line
+PS1="$PS1"'\[\033[93m\]'       # change to 
+PS1="$PS1"'\D{%H:%M:%S} '      # Date
 PS1="$PS1"'\[\033[32m\]'       # change to green
 PS1="$PS1"'\u@\h '             # user@host<space>
 PS1="$PS1"'\[\033[35m\]'       # change to purple

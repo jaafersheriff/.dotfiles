@@ -4,5 +4,6 @@
 !.tmux*
 !.bash_profile
 !.gitignore
+!.my-git-profile.sh
 !.minttyrc
 !.vimrc
